@@ -3,14 +3,15 @@
 game.play = function () {
     "use strict";
     var i, answer, currentQuestion,
-        points = 0;
-    /* questions = game.logic.getQuestions();*/
-    for (i = 0; i < 3; i = i + 1) {
-        currentQuestion = game.logic.getQuestions(); // questions.pop();
+        level = 0;
+    for (i = 0; i < 4; i = i + 1) {
+        currentQuestion = game.logic.getQuestionsp(); // questions.pop();
         answer = game.logic.askQuestion(currentQuestion);
-        if (game.logic.checkAnswer(answer, currentQuestion)) {
-            points = points + 1;
-        }
-        game.ui.showResult(points);
-    }
+        if (game.logic.isCorrect(answer, currentQuestion));
+    } {
+        level + 1;
+    };
 };
+/* questions = game.logic.getQuestions();*/
+//Anropa frågan härifrån!
+// Get question = level 0 + 1

@@ -1,46 +1,46 @@
 /*jslint browser:true */
 /*global game:false, alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false, WSH: false */
 
-game.levels = [
+game.questions = [
     [{
         q: "What is 10 * 0?",
-        a: 0
+        a: [0]
     }, {
         q: "Which word in the dictionary is always spelled wrong?",
-        a: "wrong"
+        a: ["wrong", "Wrong"]
     }, {
         q: "I can be caught but not thrown, what am I?",
-        a: "cold"
+        a: ["cold", "Cold"]
     }, {
         q: "Johnny Depp and Vanessa Paradis are still a couple, true or false?",
-        a: false // Boss fråga t Level 2
+        a: [false] // Boss fråga t Level 2
     }],
     [{
         q: "I can travel the world without leaving my corner. What am I?",
-        a: "stamp"
+        a: ["stamp", "a stamp", "Stamp"]
     }, {
         q: "I am an odd number, take away a letter and I become even. What am I?",
-        a: "seven"
+        a: ["seven", "Seven", 7]
     }, {
         q: "What is PI:s three first number?",
         a: [314, 3.14]
     }, {
         q: "An obsession with actress Jodie Foster led to the shooting of President Ronald Reagan in 1981. True or false?",
-        a: true // Boss Level 3
+        a: [true] // Boss fråga t Level 3
     }],
     [{
         q: "What is the name of the princess in Super Mario?",
-        a: "Peach"
+        a: ["Peach", "peach"]
     }, {
         q: "What is the meaning of life according to 'The Hitchhiker's Guide to the Galaxy'?",
-        a: 42
+        a: [42]
     }, {
         q: "List all the clubs where Zlatan have played, in chronological order, example: Name, Name XX, Name etc. ",
-        a: "Malmö FF, Ajax, Juventus, Inter, Barcelona FC, Milan, Paris Saint-Germain."
+        a: ["Malmö FF, Ajax, Juventus, Inter, Barcelona FC, Milan, Paris Saint-Germain"]
 
     }, {
         q: "What does 01001001 00100000 01110111 01101001 01101110 say binary?",
-        a: "I win"
+        a: ["I win"]
     }]
 ];
 
