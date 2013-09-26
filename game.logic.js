@@ -1,17 +1,19 @@
 /*jslint browser:true */
 /*global game: false, alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false, WSH: false */
-game.logic = {};
 
-game.logic.isCorrect = function (answer, question) {
+game.logic = {};
+var answer, currentQuestion;
+game.logic.isCorrect = function (currentQuestion, answer) {
     "use strict";
-    if (answer !== (-1)) {
+
+    if (currentQuestion.a.indexOf(answer) !== -1) {
         game.ui.showCorrect();
     } else {
         game.ui.showWrong();
     }
-    return (answer === question.a);
 };
-game.logic.getQuestions = function (level) {
+
+game.logic.getQuestions = function () {
     "use strict";
-    return game.questions[level].pop();
+    return game.questions.shift();
 };
