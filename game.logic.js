@@ -4,7 +4,7 @@ game.logic = {};
 
 game.logic.isCorrect = function (answer, question) {
     "use strict";
-    if (answer === question.a) {
+    if (answer !== (-1)) {
         game.ui.showCorrect();
     } else {
         game.ui.showWrong();
