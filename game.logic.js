@@ -5,7 +5,6 @@ game.logic = {};
 var answer, currentQuestion;
 game.logic.isCorrect = function (currentQuestion, answer) {
     "use strict";
-
     if (currentQuestion.a.indexOf(answer) !== -1) {
         game.ui.showCorrect();
     } else {

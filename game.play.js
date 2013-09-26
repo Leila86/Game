@@ -3,7 +3,8 @@
 var i, answer, currentQuestion, question;
 game.play = function () {
     "use strict";
-    for (i = 0; i < 10; i = i + 1) {
+    alert("One day, Bowser invades and puts a spell on the Mushroom Kingdom which turned its inhabitants into blocks, weeds, and other objects. You are the only one who can stop him by saving the prince, who is the only one who can break the spell.");
+    for (i = 0; i < 3; i = i + 1) {
         currentQuestion = game.logic.getQuestions();
         answer = game.ui.askQuestion(currentQuestion);
         game.logic.isCorrect(currentQuestion, answer);
