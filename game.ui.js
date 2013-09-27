@@ -11,5 +11,5 @@ game.ui.showWrong = function () {
 };
 game.ui.showCorrect = function () {
     "use strict";
-    alert("You made it.");
+    alert("Congrats, you earned a point!");
 };

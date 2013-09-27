@@ -2,7 +2,8 @@
 /*global game: false, alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false, WSH: false */
 
 game.logic = {};
-var answer, currentQuestion;
+var answer, i, points = 0,
+    currentQuestion;
 game.logic.isCorrect = function (currentQuestion, answer) {
     "use strict";
     if (currentQuestion.a.indexOf(answer) !== -1) {
@@ -11,7 +12,6 @@ game.logic.isCorrect = function (currentQuestion, answer) {
         game.ui.showWrong();
     }
 };
-
 game.logic.getQuestions = function () {
     "use strict";
     return game.questions.shift();
