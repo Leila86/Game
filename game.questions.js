@@ -12,7 +12,7 @@ game.questions = [{
     a: ["cold", "Cold"]
 }, {
     q: "Johnny Depp and Vanessa Paradis are still a couple, true or false?",
-    a: ["false"] // Boss fråga t Level 2
+    a: ["false"]
 }, {
     q: "I can travel the world without leaving my corner. What am I?",
     a: ["stamp", "a stamp", "Stamp"]
@@ -24,7 +24,7 @@ game.questions = [{
     a: ["314", "3.14"]
 }, {
     q: "An obsession with actress Jodie Foster led to the shooting of President Ronald Reagan in 1981. True or false?",
-    a: ["true"] // Boss fråga t Level 3
+    a: ["true"]
 }, {
     q: "What is the name of the princess in Super Mario?",
     a: ["Peach", "peach"]
