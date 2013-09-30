@@ -6,7 +6,7 @@ var i, answer, currentQuestion, points = 0,
 game.play = function () {
     "use strict";
     alert("One day, Bowser invades and puts a spell on the Mushroom Kingdom which turned its inhabitants into blocks, weeds, and other weird things. You are the only one who can stop him by earning more points than Bowser in this battle of the minds!");
-    for (i = 0; i < 11; i = i + 1) {
+    for (i = 0; i < 3; i = i + 1) {
         currentQuestion = game.logic.getQuestions();
         answer = game.ui.askQuestion(currentQuestion);
         game.logic.isCorrect(currentQuestion, answer);
