@@ -42,18 +42,22 @@ table {
   border-spacing: 0;
 }
 /*CSS reset */ 
+body {
+  background-image: url("../images/toejam2.jpg");
+  max-width: 600px;
+  max-height: 600px;
+  margin: 20px;
+  margin-left: 20%; 
+}
+
 h1 {
-  font-size: 340%; 
+  font-size: 100px; 
   color: #fff;
-  text-shadow: 1px 0px 12px rgba(0, 0, 0, 0.82);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #21DDA2, 0 3px 0 #bbb, 0 4px 0 #21DDA2, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
   padding-bottom: 10px; 
   margin-bottom: 20px;
   text-align: center;
-}
-body {
-  max-width: 600px;
-  max-height: 600px;
-  margin: 40px;
+  font-family: True Crimes, Charcoal, sans-serif;
 }
 
 .frame {
@@ -62,16 +66,19 @@ body {
  min-width: 100%;
  min-height: 100%;
  border-color: black; 
+
  float: none;
 
 }
 
 .bricks {
+  background-image: url("../images/monster.jpg");
   width: 160px;
   height: 160px;
-  padding:1px;
-  border:5px solid hsl(46, 8%, 89%);
+  padding: 1px;
+  border: 5px solid hsl(81, 2%, 82%);
   border-radius: 5px;
   margin: 5px;
   float: left;
+  box-shadow: 2px 2px 2px hsl(81, 2%, 50%);
 }
