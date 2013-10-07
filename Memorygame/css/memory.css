@@ -43,21 +43,25 @@ table {
 }
 /*CSS reset */ 
 body {
-  background-image: url("../images/toejam2.jpg");
+  background-image: url("../images/toejam3.jpg");
   max-width: 600px;
   max-height: 600px;
-  margin: 20px;
-  margin-left: 20%; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
-  font-size: 100px; 
+  font-size: 140px; 
+  height: 140px;
+  width: 535px;
+  margin-right: 10px;
+  margin-left: 10px; 
   color: #fff;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #21DDA2, 0 3px 0 #bbb, 0 4px 0 #21DDA2, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
   padding-bottom: 10px; 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
-  font-family: True Crimes, Charcoal, sans-serif;
+  font-family: True Crimes, sans-serif;
 }
 
 .frame {
@@ -65,9 +69,8 @@ h1 {
  max-height: 100%;
  min-width: 100%;
  min-height: 100%;
- border-color: black; 
-
  float: none;
+ position: center;
 
 }
 
@@ -82,3 +85,15 @@ h1 {
   float: left;
   box-shadow: 2px 2px 2px hsl(81, 2%, 50%);
 }
+.bricks:hover {
+  -webkit-transform: scale(1.05);
+  transition: all 0.7s ease-in-out;
+}
+.jack {
+  opacity: 100;
+  width: 1000px;
+  height: 1000px;
+  background-color: white;
+}
+
+
