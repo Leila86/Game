@@ -5,6 +5,8 @@ $(function () {
 
     "use strict";
     var checkCards,
+        card1,
+        card2,
         collectI = [],
         collectImg = [],
         countClick = 0,
@@ -14,28 +16,41 @@ $(function () {
         var i = Number($(this).attr("id").replace("div", "")); // Här får vi ut vilket nummer Div:en som vi klickat på har. 
         $(this).css("background-image", "url(" + memory.array[i].url + ")"); // Här tilldelar vi den diven en bild från bild arrayen. Bilden har samma indexnummer som diven. 
         countClick = countClick + 1;
-        collectI.push(i);
-        collectImg.push(memory.array[i].n);
-        //console.log(i);
+        collectI.push(i); // Vi sparar vilka divs i:n som vi klickat på i en  array utanför klick-funktionen.
+        collectImg.push(memory.array[i].n); //Sparar vilka nummer som bilden har i array utanför klick-funktionen.
     });
 
-    checkCards = function (collectI, collectImg) {
-        if (collectI.indexOf(0, 1) === collectImg.indexOf(0, 1)) {
-            points = points + 1;
-        }
+    //Hit fungerar allt bra!
 
+    checkCards = function (collectImg, collectI) {
+        card1 = ("div" + collectI[0].toString);
+        card2 = ("div" + collectI[1].toString);
+        if ((countClick === 2) && (collectImg[0] === collectImg[1])) {
+            points = points + 1;
+        } else {
+            $(card2, card1).css("background-image", "images/monster.jpg");
+        }
     };
+    /*
+Tanken med funktionen ovan är att vi ska kolla om collectImg:s index 0 och 1 är samma,
+det innebär att de är ett par och ska fortsätta vara öppna. 
+Vi lade även in countClick i denna funktion, men jag vet inte om den kommer finnas kvar här,
+eller kanske bli en egen. 
+
+Problemet är att det inte fungerar när jag provkör i console. 
+Och js-lint klagar på att checkCards är oanvänt, vilket den ju inte är?
+
+
+Om jag kan få lite tips på varför det inte vill sig så är jag tacksam, och 
+hur jag ska kunna testa det i consolen. 
+
+
+*/
+
 });
 
 
-/*
-    };
-    checkCards = function (countClick, i) {
 
-        if ((countClick > 2) && (i = memory.array[i])) {
-
-        }
-    }*/
 /*
 $(function () {
     "use strict";
@@ -79,12 +94,10 @@ $(function () {
     };
     checkAnswer = function (selectedAnswer) {
         var moveToNextQuestion = function () {
-            // Step 9
-            // Increase the currentQuestionIndex by 1
-            // Your step 9 code here
             currentQuestionIndex = currentQuestionIndex + 1;
-            
+
             $("#result").text("You got " + points + " points!");
+
             if (currentQuestionIndex < questions.length) {
                 writeQuestion();
             } else {
