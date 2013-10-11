@@ -18,17 +18,25 @@ $(function () {
             countClick = countClick + 1;
             div1 = $(this);
             card1 = memory.array[i].url;
+            if (card1 === "images/jack.jpg") {
+                memory.jack();
+            }
             //return card1 && div1;
         } else {
             countClick = countClick + 1;
             div2 = $(this);
             card2 = memory.array[i].url;
+            if (card2 === "images/jack.jpg") {
+                memory.jack();
+            }
             if (card1 !== card2) {
                 setTimeout(function () {
                     div1.css("background-image", "url(../images/monster.jpg)");
                     div2.css("background-image", "url(../images/monster.jpg)");
                 }, 2000);
                 countClick = 0;
+                //card2 = 0;
+                //card1 = 0;
             }
         }
     });
