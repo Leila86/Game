@@ -1,7 +1,5 @@
 /*jslint browser:true */
 /*global $: false, memory: false, alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false, WSH: false */
-
-
 $(function () {
 
     "use strict";
@@ -19,7 +17,8 @@ $(function () {
                 canIclick = true;
             }, 1500);
         };
-    $("p").text("Points: " + points);
+
+    $(".result p").text("Points: " + points);
     $(".frame div").click(function () {
         if (canIclick) {
             var i = Number($(this).attr("id").replace("div", "")); // Här får vi ut vilket nummer Div:en som vi klickat på har. 
@@ -33,23 +32,27 @@ $(function () {
                 }
             } else {
                 div2 = $(this);
-                card2 = memory.array[i].url;
-                if (card2 === "images/jack.jpg") {
-                    memory.jack();
-                }
-                if (card1 !== card2) {
-                    canIclick = false;
-                    hideWrongAnswer(div1, div2);
+                if (div2.attr("id") !== div1.attr("id")) {
+                    card2 = memory.array[i].url;
+                    if (card2 === "images/jack.jpg") {
+                        memory.jack();
+                    } else {
 
-                } else {
-                    points = points + 1;
-                    $("p").text("Points " + points);
-                    div1.css("background-image", "card1");
-                    div2.css("background-image", "card2");
+                        if (card1 !== card2) {
+                            canIclick = false;
+                            hideWrongAnswer(div1, div2);
+
+                        } else {
+                            points = points + 1;
+                            if (points === 4) {
+                                memory.win();
+                            }
+                            $(".result p").text("Points " + points);
+                        }
+                        countClick = 0;
+                    }
                 }
-                countClick = 0;
             }
         }
     });
-
 });

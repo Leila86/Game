@@ -29,9 +29,3 @@ memory.array = _.shuffle([{
     url: "images/jack.jpg",
     n: 5
 }]);
-/* "images/4.jpg",
-    "images/1.jpg",
-    "images/2.jpg",
-    "images/4.jpg",
-    "images/3.jpg",
-    "images/jack.jpg"*/
