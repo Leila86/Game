@@ -1,7 +1,7 @@
 /*jslint browser:true */
 /*global $: false, memory: false, alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false, WSH: false */
-$(function () {
 
+$(function () {
     "use strict";
     var card1,
         div2,
@@ -21,8 +21,8 @@ $(function () {
     $(".result p").text("Points: " + points);
     $(".frame div").click(function () {
         if (canIclick) {
-            var i = Number($(this).attr("id").replace("div", "")); // Här får vi ut vilket nummer Div:en som vi klickat på har. 
-            $(this).css("background-image", "url(" + memory.array[i].url + ")"); // Här tilldelar vi den diven en bild från bild arrayen. Bilden har samma indexnummer som diven. 
+            var i = Number($(this).attr("id").replace("div", ""));
+            $(this).css("background-image", "url(" + memory.array[i].url + ")");
             if (countClick === 0) {
                 countClick = countClick + 1;
                 div1 = $(this);

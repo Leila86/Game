@@ -6,10 +6,9 @@
     <link href="css/memory.css" rel="StyleSheet" />
 
 </head>
-<body>
-
+<body> 
     <h1>Memory</h1>
-    <div class="jack"> <p id="johnny"></p></div>
+    <div id="jack"><h2></h2></div>
     <div class="result">
         <p id="points"> 
         </p>
@@ -26,14 +25,17 @@
         <div class="bricks" id="div0"></div>
 
     </div>
-    <audio>
+    <audio id="johnny">
+        <source src="sounds/johnny.wav"/>
+    </audio>
+    <audio id="win">
         <source src="sounds/applause.wav"/>
     </audio>
     <embed height="50" width="100" src="sounds/cosmic.wav">
+        <script src="js/memory.js"></script>  
         <script src="js/memory.underscore.js"></script>  
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
         <script src="js/memory.play.js"></script>
-        <script src="js/memory.js"></script>  
         <script src="js/memory.script.js"></script>
         <script src="js/memory.array.js"></script>
         <script src="js/memory.win.js"></script>
